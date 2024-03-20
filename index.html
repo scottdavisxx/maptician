@@ -6,10 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="./src/main.css" />
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <div id="app" class="flex items-start justify-center pt-10">
-      <h1 class="text-4xl">Maptician</h1>
+    <div
+      id="app"
+      class="flex flex-col items-center justify-center pt-10 w-full px-20 gap-4"
+    >
+      <h1 class="w-full text-8xl text-blue-600 text-center">Maptician</h1>
+      <div class="w-full">
+        <h2 class="text-4xl mb-8">Attendees:</h2>
+        <!-- Container for all Attendees -->
+        <div
+          id="data-container"
+          class="flex flex-wrap gap-4 justify-between"
+        ></div>
+      </div>
     </div>
   </body>
 </html>
