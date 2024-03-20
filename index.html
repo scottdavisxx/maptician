@@ -2,23 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Maptician</title>
     <link rel="stylesheet" href="./src/main.css" />
     <script type="module" src="./main.js"></script>
-  </head>
-  <body class="bg-blue-200">
+ </head>
+  <body class="">
+    <nav class="fixed top-0 z-10 w-full flex items-center text-center justify-center shadow-2xl bg-white">
+      <img src="./public/maptician.webp" alt="Maptician" class="h-20 " />
+      <h1 class="text-hidden">Maptician</h1>
+    </nav>
+    <!-- Remove some classes from this div before submitting -->
     <div
       id="app"
-      class="flex flex-col items-center justify-center pt-6 w-screen px-8 gap-4"
+      class="flex flex-col items-center justify-center pt-28 w-screen px-8 gap-4 "
     >
-      <h1 class="w-full text-4xl text-blue-600 text-center">Maptician</h1>
       <div class="w-full relative">
         <div class="sm:w-80 sm:fixed">
-          <h3 class="text-xl">Add Record:</h3>
+          <h3 class="text-xl text-primary">Add Record:</h3>
         <div class="bg-white shadow-md p-6 my-4 rounded-lg w-full ">
-          <form class="flex flex-col gap-2">
+          <form class="flex flex-col gap-2 text-secondary">
             <label for="name">Username:</label>
             <input type="text" id="name" class="rounded-md" />
             <label for="location-name">Location Name:</label>
@@ -35,12 +39,12 @@
           </form>
         </div>
       </div>
-        <!-- Container for all Attendees -->
-        <div
-          id="data-container"
-          class="flex flex-wrap relative gap-4 justify-between overflow-x-auto overflow-y-auto 
-            sm:pl-[350px]"
-        ></div>
+      <!-- Container for all Attendees -->
+      <div
+        id="data-container"
+        class="flex flex-wrap relative gap-4 justify-between overflow-x-auto overflow-y-auto text-secondary
+          sm:pl-[350px]"
+      ></div>
       </div>
     </div>
   </body>
