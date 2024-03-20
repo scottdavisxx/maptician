@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: '#1d2653',
         secondary: '#445794',
+        accent: '#46bd9c',
       },
       fontSize: {
         hidden: '0px',
