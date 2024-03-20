@@ -5,22 +5,24 @@ export function fetchData() {
     .then((response) => response.json())
     .then((data) => {
       data.forEach((entry) => {
-        // console.log(entry);
+        console.log(entry);
         const entryElement = document.createElement("div");
         entryElement.classList.add(
-          "border",
+          "bg-white",
           "rounded-lg",
-          "border-blue-600",
           "p-3",
           "mb-4",
-          "w-[30%]"
+          "max-w-[400px]",
+          "min-w-60",
+          "grow",
+          "shadow-md"
         );
         entryElement.innerHTML = `
-          <p>Name: ${entry.userName}</p>
-          <p>Location Name: ${entry.locationName}</p>
-          <p>Location Address: ${entry.locationAddress}</p>
-          <p>Floor: ${entry.floorName}</p>
-          <p>Seat: ${entry.seatName}</p>
+          <p class="font-medium">${entry.userName}</p>
+          <p>${entry.locationName}</p>
+          <p>${entry.locationAddress}</p>
+          <p>${entry.floorName}</p>
+          <p>${entry.seatName}</p>
         `;
 
         container.appendChild(entryElement);

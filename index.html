@@ -8,15 +8,38 @@
     <link rel="stylesheet" href="./src/main.css" />
     <script type="module" src="./main.js"></script>
   </head>
-  <body>
+  <body class="bg-blue-200">
     <div
       id="app"
-      class="flex flex-col items-center justify-center pt-10 w-full px-20 gap-4"
+      class="flex flex-col items-center justify-center pt-6 w-full px-10 gap-4"
     >
-      <h1 class="w-full text-8xl text-blue-600 text-center">Maptician</h1>
+      <h1 class="w-full text-4xl text-blue-600 text-center">Maptician</h1>
       <div class="w-full">
-        <h2 class="text-4xl mb-8">Attendees:</h2>
+        <h3>Search:</h3>
+        <input type="text" id="search" class="my-4 rounded-md w-full" />
+        <button class="bg-gray-400 w-32 py-2 px-1 rounded-md mb-8">
+          Submit
+        </button>
+        <h3>Add Record:</h3>
+        <div class="bg-white shadow-md p-6 my-4 rounded-lg">
+          <form class="flex flex-col gap-2">
+            <label for="name">Username:</label>
+            <input type="text" id="name" class="rounded-md" />
+            <label for="location-name">Location Name:</label>
+            <input type="text" id="location-name" class="rounded-md" />
+            <label for="location-address">Location Address:</label>
+            <input type="text" id="location-address" class="rounded-md" />
+            <label for="floor-name">Floor Number:</label>
+            <input type="number" id="floor-name" class="rounded-md" />
+            <label for="seat-number">Seat Number:</label>
+            <input type="number" id="seat-number" class="rounded-md" />
+            <button class="bg-gray-400 w-32 py-2 px-1 rounded-md mt-6">
+              Add Record
+            </button>
+          </form>
+        </div>
         <!-- Container for all Attendees -->
+        <h2 class="text-xl my-4">Attendees:</h2>
         <div
           id="data-container"
           class="flex flex-wrap gap-4 justify-between"
