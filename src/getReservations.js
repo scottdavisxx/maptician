@@ -1,14 +1,12 @@
-// TODO Rename to getReservations.js
 import { deleteReservation } from './deleteReservation';
 
-export function fetchReservations() {
+export function getReservations() {
   const container = document.getElementById('data-container');
 
   fetch('/api/reservations')
     .then((response) => response.json())
     .then((data) => {
       data.forEach((entry) => {
-        // console.log(entry);
         const entryElement = document.createElement('div');
         entryElement.setAttribute('id', entry.id);
         entryElement.classList.add('bg-white', 'rounded-lg', 'p-3', 'mb-4', 'max-w-[400px]', 'w-60', 'grow', 'shadow-md', 'relative');

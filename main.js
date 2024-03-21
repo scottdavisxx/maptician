@@ -1,5 +1,5 @@
-import { fetchReservations } from './src/fetchReservations.js';
+import { getReservations } from './src/getReservations.js';
 import { formHandler } from './src/formHandler.js';
 
-fetchReservations();
+getReservations();
 formHandler();

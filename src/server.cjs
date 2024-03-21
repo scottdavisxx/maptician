@@ -92,5 +92,5 @@ app.delete('/api/reservations/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  getReservations(`Server is running on http://localhost:${PORT}`);
 });

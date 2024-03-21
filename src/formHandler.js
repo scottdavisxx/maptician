@@ -11,6 +11,7 @@ export function formHandler() {
     const start = new Date().toISOString();
     const end = new Date().toISOString();
 
+    // In a production environment there would be more validation here.
     const formData = {
       id: uniqueId,
       userName: document.getElementById('name').value,
