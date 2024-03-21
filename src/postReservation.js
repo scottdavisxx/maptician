@@ -1,6 +1,4 @@
-import { formData } from './formSubmit';
-
-export function postReservation() {
+export function postReservation(formData) {
   fetch('/api/reservations', {
     method: 'POST',
     headers: {

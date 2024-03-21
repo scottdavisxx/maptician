@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import { postReservation } from './postReservation';
 
 export function formHandler() {
   document.getElementById('addReservationForm').addEventListener('submit', function (e) {
@@ -8,7 +9,7 @@ export function formHandler() {
     const userUuid = uuidv4();
 
     const start = new Date().toISOString();
-    const end = new Date().setHours(end.getHours() + 1);
+    const end = new Date().toISOString();
 
     const formData = {
       id: uniqueId,
@@ -23,5 +24,7 @@ export function formHandler() {
       isPresent: true,
       isPrivate: document.getElementById('isPrivate').checked,
     };
+
+    postReservation(formData);
   });
 }
