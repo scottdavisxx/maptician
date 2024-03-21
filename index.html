@@ -22,18 +22,20 @@
         <div class="sm:w-80 sm:fixed z-10">
           <h3 class="text-xl text-primary">Add Record:</h3>
         <div class="bg-white shadow-md p-6 my-4 rounded-lg w-full">
-          <form class="flex flex-col gap-2 text-secondary">
+          <form id="addReservationForm" class="flex flex-col gap-2 text-secondary">
             <label for="name">Username:</label>
             <input type="text" id="name" class="rounded-md" />
-            <label for="location-name">Location Name:</label>
-            <input type="text" id="location-name" class="rounded-md" />
-            <label for="location-address">Location Address:</label>
-            <input type="text" id="location-address" class="rounded-md" />
-            <label for="floor-name">Floor Number:</label>
-            <input type="number" id="floor-name" class="rounded-md" />
-            <label for="seat-number">Seat Number:</label>
-            <input type="number" id="seat-number" class="rounded-md" />
-            <button class="bg-accent text-white w-32 py-2 px-1 rounded-md mt-6 hover:bg-secondary">
+            <label for="locationName">Location Name:</label>
+            <input type="text" id="locationName" class="rounded-md" />
+            <label for="locationAddress">Location Address:</label>
+            <input type="text" id="locationAddress" class="rounded-md" />
+            <label for="floorName">Floor Number:</label>
+            <input type="number" id="floorName" class="rounded-md" />
+            <label for="seatNumber">Seat Number:</label>
+            <input type="number" id="seatNumber" class="rounded-md" />
+            <label for="isPrivate">Private Event:</label>
+            <input type="checkbox" id="isPrivate" class="rounded-sm" />
+            <button type="submit" class="bg-accent text-white w-32 py-2 px-1 rounded-md mt-6 hover:bg-secondary">
               Add Record
             </button>
           </form>

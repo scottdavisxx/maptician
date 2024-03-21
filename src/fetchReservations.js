@@ -1,3 +1,4 @@
+// TODO Rename to getReservations.js
 import { deleteReservation } from './deleteReservation';
 
 export function fetchReservations() {
