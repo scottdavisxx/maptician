@@ -1,7 +1,7 @@
-export function fetchData() {
+export function fetchReservations() {
   const container = document.getElementById('data-container');
 
-  fetch('/api/records')
+  fetch('/api/reservations')
     .then((response) => response.json())
     .then((data) => {
       data.forEach((entry) => {
@@ -18,7 +18,6 @@ export function fetchData() {
               Delete
             </button>
         `;
-
         container.appendChild(entryElement);
       });
     })

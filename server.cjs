@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(express.static('./dist'));
 
 // GET endpoint to retrieve all records
-app.get('/api/records', (req, res) => {
+app.get('/api/reservations', (req, res) => {
   fs.readFile('./dist/attendanceData.json', 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading file:', err);
@@ -33,12 +33,12 @@ app.get('/api/records', (req, res) => {
 });
 
 // POST endpoint to add a record
-app.post('/api/records', (req, res) => {
+app.post('/api/reservations', (req, res) => {
   // Implement logic to add a new record to your JSON file
 });
 
 // DELETE endpoint to delete a record by ID
-app.delete('/api/records/:id', (req, res) => {
+app.delete('/api/reservations/:id', (req, res) => {
   // Implement logic to delete a record from your JSON file
 });
 

@@ -1,3 +1,3 @@
-import { fetchData } from "./src/fetchData.js";
+import { fetchReservations } from './src/fetchReservations.js';
 
-fetchData();
+fetchReservations();
