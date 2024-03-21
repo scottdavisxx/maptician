@@ -1,4 +1,4 @@
-import { prependReservationToDom } from './prepentReservationToDom';
+import { prependReservationToDom } from './prependReservationToDom';
 
 export function postReservation(formData) {
   fetch('/api/reservations', {

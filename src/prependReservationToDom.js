@@ -13,11 +13,15 @@ export function prependReservationToDom(reservation) {
     <p>${reservation.seatName}</p>
     <button class="delete-button bg-accent w-32 py-1 rounded-md mt-6 text-white absolute bottom-2 right-2 hover:bg-secondary transition-all ease-in-out duration-200">
       Delete
-    </button>
+    </button> 
   `;
   const deleteButton = entryElement.querySelector('.delete-button');
   deleteButton.addEventListener('click', () => {
-    deleteReservation(reservation.id);
+    // In a production environment this would be a custom dialog.
+    const userConfirmed = confirm('Are you sure you want to delete this reservation?');
+    if (userConfirmed) {
+      deleteReservation(entry.id);
+    }
   });
   // Append the new element to the container
   container.prepend(entryElement);

@@ -17,10 +17,10 @@ export function fetchReservations() {
           <p>${entry.locationName}</p>
           <p>${entry.locationAddress}</p>
           <p>${entry.floorName}</p>
-            <p>${entry.seatName}</p>
-            <button class="delete-button bg-accent w-32 py-1 rounded-md mt-6 text-white absolute bottom-2 right-2 hover:bg-red-600 transition-all ease-in-out duration-200">
-              Delete
-            </button>
+          <p>${entry.seatName}</p>
+          <button class="delete-button bg-accent w-32 py-1 rounded-md mt-6 text-white absolute bottom-2 right-2 hover:bg-red-600 transition-all ease-in-out duration-200">
+            Delete
+          </button>
         `;
         const deleteButton = entryElement.querySelector('.delete-button');
         deleteButton.addEventListener('click', () => {
