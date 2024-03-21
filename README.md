@@ -22,6 +22,14 @@ Maptician Take-Home is a Node.js web application. It allows users to view all re
 ### Notes:
 
 - Vite was used in development. However getting it working locally is a lot of additional work that is not relevant to this project.
+- There are some values in attendanceData.json that I cannot be positive how they should interact with the front end.
+- Given unlimited time I might:
+  - Add a start and an end time in the Add Record form.
+  - Add a button to the individual reservations to toggle `isPresent`.
+  - Create a login system to properly handle userId. In this version each entry has a new userId. Ideally a user could have many reservations associated with their userId.
+  - Sanitize/Validate form inputs.
+  - Add pagination.
+  - Add Search.
 - All scripts can be found in [package.json](package.json) under "scripts".
 
 ## API Endpoints
