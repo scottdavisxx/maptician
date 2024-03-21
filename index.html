@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="./src/main.css" />
     <script type="module" src="./main.js"></script>
  </head>
-  <body class="">
-    <nav class="fixed top-0 z-10 w-full flex items-center text-center justify-center shadow-2xl bg-white">
-      <img src="./public/maptician.webp" alt="Maptician" class="h-20 " />
+  <body class="bg-gray-200">
+    <nav class="fixed top-0 z-10 w-full flex items-center text-center justify-center shadow-sm bg-white">
+      <img src="./public/maptician.webp" alt="Maptician" class="h-20 py-2" />
       <h1 class="text-hidden">Maptician</h1>
     </nav>
     <!-- Remove some classes from this div before submitting -->
     <div
       id="app"
-      class="flex flex-col items-center justify-center pt-28 w-screen px-8 gap-4 bg-accent"
+      class="flex flex-col items-center justify-center pt-28 w-screen px-8 gap-4"
     >
       <div class="w-full relative">
-        <div class="sm:w-80 sm:fixed">
+        <div class="sm:w-80 sm:fixed z-10">
           <h3 class="text-xl text-primary">Add Record:</h3>
-        <div class="bg-white shadow-md p-6 my-4 rounded-lg w-full ">
+        <div class="bg-white shadow-md p-6 my-4 rounded-lg w-full">
           <form class="flex flex-col gap-2 text-secondary">
             <label for="name">Username:</label>
             <input type="text" id="name" class="rounded-md" />
@@ -33,7 +33,7 @@
             <input type="number" id="floor-name" class="rounded-md" />
             <label for="seat-number">Seat Number:</label>
             <input type="number" id="seat-number" class="rounded-md" />
-            <button class="bg-gray-400 w-32 py-2 px-1 rounded-md mt-6">
+            <button class="bg-accent text-white w-32 py-2 px-1 rounded-md mt-6 hover:bg-secondary">
               Add Record
             </button>
           </form>
@@ -42,9 +42,12 @@
       <!-- Container for all Attendees -->
       <div
         id="data-container"
-        class="flex flex-wrap relative gap-4 justify-between overflow-x-auto overflow-y-auto text-secondary
+        class="flex flex-wrap relative gap-4 justify-between overflow-x-auto overflow-y-auto text-secondary top-10
           sm:pl-[350px]"
-      ></div>
+      >
+        <p class="w-full top-28 z-10 text-xl text-primary bg-gray-200
+          sm:fixed sm:top-20 sm:pt-8">Reservations:</p>
+      </div>
       </div>
     </div>
   </body>
