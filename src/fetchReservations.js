@@ -25,7 +25,6 @@ export function fetchReservations() {
         const deleteButton = entryElement.querySelector('.delete-button');
         deleteButton.addEventListener('click', () => {
           deleteReservation(entry.id);
-          // console.log(entry.id);
         });
         container.appendChild(entryElement);
       });
