@@ -26,6 +26,7 @@ Maptician Take-Home is a Node.js web application. It allows users to view all re
 - Given unlimited time I might:
   - Add a start and an end time in the Add Record form.
   - Add a button to the individual reservations to toggle `isPresent`.
+  - Add a date/time picker for start/end times.
   - Create a login system to properly handle userId. In this version each entry has a new userId. Ideally a user could have many reservations associated with their userId.
   - Sanitize/Validate form inputs.
   - Add pagination.
