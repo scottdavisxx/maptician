@@ -21,6 +21,7 @@ Maptician Take-Home is a Node.js web application. It allows users to view all re
 
 ### Notes:
 
+- Vite was used in development. However getting it working locally is a lot of additional work that is not relevant to this project.
 - All scripts can be found in [package.json](package.json) under "scripts".
 
 ## API Endpoints
