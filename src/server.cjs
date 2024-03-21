@@ -6,17 +6,6 @@ const fs = require('fs');
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// Conditional middleware for production
-if (process.env.NODE_ENV === 'production') {
-  // Serve static files from 'dist' directory
-  app.use(express.static('dist'));
-
-  // Handle SPA fallback - serves index.html on any route that doesn't match an API route
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
-  });
-}
-
 // Serve your static files (HTML, CSS, JS)
 app.use(express.static('./dist'));
 
