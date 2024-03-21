@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const fs = require('fs');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -21,7 +22,7 @@ app.use(express.static('./dist'));
 
 // GET endpoint to retrieve all records
 app.get('/api/records', (req, res) => {
-  fs.readFile('./assets/attendanceData.json', 'utf8', (err, data) => {
+  fs.readFile('./dist/attendanceData.json', 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading file:', err);
       res.status(500).send('An unexpected error occurred');
