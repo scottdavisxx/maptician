@@ -63,7 +63,7 @@ Below are the available API endpoints and their descriptions:
   }
   ```
 
-  ### DELETE /api/reservations/:id
+### DELETE /api/reservations/:id
 
 - **Description**: Delete a specific reservation by ID.
 - **Method**: `DELETE`
