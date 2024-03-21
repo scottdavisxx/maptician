@@ -39,7 +39,39 @@ app.post('/api/reservations', (req, res) => {
 
 // DELETE endpoint to delete a record by ID
 app.delete('/api/reservations/:id', (req, res) => {
-  // Implement logic to delete a record from your JSON file
+  const { id } = req.params; // Extract the ID from the request URL
+
+  // Read the current records from the file
+  fs.readFile('./dist/attendanceData.json', 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading file on delete:', err);
+      return res.status(500).send('An unexpected error occurred');
+    }
+
+    // Parse the data to JSON
+    const records = JSON.parse(data);
+
+    // Find the index of the record to delete
+    const index = records.findIndex((record) => record.id === id);
+
+    // If the record exists, remove it
+    if (index !== -1) {
+      records.splice(index, 1); // Remove the record with the matching ID
+
+      // Write the updated records back to the file
+      fs.writeFile('./dist/attendanceData.json', JSON.stringify(records, null, 2), (err) => {
+        if (err) {
+          console.error('Error writing file after delete:', err);
+          return res.status(500).send('An unexpected error occurred');
+        }
+        // Respond to the request indicating the record was successfully deleted
+        res.status(204).send(); // 204 No Content
+      });
+    } else {
+      // If the record wasn't found, send a 404 response
+      res.status(404).send('Record not found');
+    }
+  });
 });
 
 app.listen(PORT, () => {
